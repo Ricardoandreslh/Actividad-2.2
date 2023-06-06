@@ -5,12 +5,15 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
+    color: white;
   }
 
 a{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration:none;
 }
+
+
 
 .articulos{
     display: flex;
@@ -23,9 +26,17 @@ a{
 }
 
 .titulo{
-    color: rgb(22, 22, 22)
+    color: rgb(255, 205, 205)
 }
 
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(182, 182, 182);
+    text-align: left;
+}
 
 
 
