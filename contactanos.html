@@ -15,14 +15,12 @@
 <body>  
     
     <header>
-        <h1 align="center"><a href="index.html">Recetas de la Abuela</a></h1>
-        <hr size="5px" color="black" />
+        <h1><a href="index.html" class="header-titulo">RECETAS DE LA ABUELA</a></h1>
     </header>
     
     <main class="articulos">
-        <section class="contenedortexto">
+        <section>
             <h1>¿Tiene preguntas? Envíanos un correo electrónico.</h1>
-            <p>Somos una publicación líder en la industria que brinda las últimas noticias e información sobre SEO, búsqueda y cómo impacta su negocio y su carrera.</p>
             <p>¿Tiene alguna pregunta para nosotros o comentarios? Haga clic en la categoría más adecuada y complete el formulario para comunicarse con nosotros.</p>
         </section>
         <section class="formulario-contenedor">
@@ -32,17 +30,17 @@
                 <form autocomplete="on">
                     <p>
                         <label for="nombre">Nombre y Apellido</label><br>
-                        <input type="text" id="nombre"><br>
-                        <input type="text" id="apellido"><br>
+                        <input type="text" id="nombre" name="nombre" required><br>
                     </p>
 
                     <p>
                         <label for="email">Correo electrónico</label><br>
-                        <input type="text" id="email"><br>
+                        <input type="email" id="email" name="email" required><br>
                     </p>
 
                     <p>
-                        <textarea name="message" rows="10" cols="30">Envianos tu mensaje.</textarea>
+                        <label for="message">Envía tu mensaje:</label>
+                        <textarea id="message"  rows="10" cols="30" name="message" required></textarea>
                     </p>
 
                     <input type="submit" value="Enviar">    
@@ -52,5 +50,11 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>Autor: Ricardo Loaiza<br></p>
+        <a href="contactanos.html" class="titulo"><strong> Click aqui para revisar nuestra información.</strong></a>
+    </footer>
+
 </body>
 </html>
