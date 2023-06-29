@@ -1,0 +1,19 @@
+{
+  "name": "actividad-2023-b-frontend",
+  "version": "1.0.0",
+  "description": "2.2",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -a localhost -p 3001"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22",
+    "http-server": "^0.12.3"
+  }
+
+}
