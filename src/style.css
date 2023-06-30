@@ -24,6 +24,7 @@ body{
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .titulo h1{
@@ -68,25 +69,67 @@ a {
     line-height: 22px;
 }
 
-.articulos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
+
+.parallax {
+  position: relative;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+}
+
+.parallax2 {
+  position: relative;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  color: black;
+}
+
+
+.parallax:nth-child(1) {
+  background-image: url("https://img.freepik.com/free-photo/bread-slices-with-topping-tomato-cheese-olives-white-table_23-2148194999.jpg?w=2000");
+}
+
+.parallax:nth-child(2) {
+  background-image: url("https://img.freepik.com/premium-photo/different-cooking-ingredients-spices-white-background_185193-88914.jpg?w=2000");
+}
+
+.parallax2:nth-child(1) {
+  background-image: url("https://www.netcostmarket.com/wp-content/uploads/2019/10/food-background-1.jpg");
+}
+
+.contenido-parallax {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  animation: fadeInUp 1s ease;
+  color: black;
+}
+
+p {
+  font-size: 18px;
+  animation: fadeInUp 1s ease 0.5s;
+  color: black;
+}
+
+h2 {
+  font-size: 24px;
+  animation: fadeInUp 1 ease;
 }
 
 .titulo{
     color: #111;
-}
-
-.receta{
-    color: black;
-    text-align: left;
-    margin: 10px;
 }
 
 .contenedor{
@@ -106,10 +149,9 @@ a {
     text-align: left;
 }
 
-.receta-titulo{
-  color: #000000;
+li{
+  list-style: none;
 }
-
 
 form {
     max-width: 500px;
@@ -149,9 +191,9 @@ label {
   .redes {
     width: 100%;
     height: calc(100vh - 80px);
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 80px;
+    top: 10%;
     background-color: #51001A;
     display: flex;
     flex-direction: column;
@@ -159,6 +201,7 @@ label {
     justify-content: space-around;
     transition: transform 0.5s ease-in-out;
     transform: translateX(100%);
+    z-index: 101;
   }
 
   .redes li {
@@ -204,4 +247,15 @@ to {
   opacity: 1;
   transform: translateX(0px);
 }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
