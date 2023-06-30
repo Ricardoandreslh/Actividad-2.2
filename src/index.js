@@ -1,10 +1,23 @@
-import './style.css'
+const navSlide = () => {
+  const hamburguesa = document.querySelector('.hamburguesa');
+  const redes = document.querySelector('.redes');
+  const navLinks = document.querySelectorAll('.redes li');
+  
+  hamburguesa.addEventListener('click', () => {
+      // Toggle Nav
+      redes.classList.toggle('nav-active'); 
 
-window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.navbar').classList.add('animate');
-    document.querySelector('.menu').classList.add('animate');
-    var dropdowns = document.querySelectorAll('.dropdown-menu');
-    dropdowns.forEach(function(dropdown) {
-      dropdown.classList.add('animate');
-    });
+      // Animate Links
+      navLinks.forEach((link, index) => {
+          if (link.style.animation) {
+              link.style.animation = '';
+          } else {
+              link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+          }
+      });
+      //Burger Animation
+      hamburguesa.classList.toggle('toggle');        
   });
+}
+
+navSlide();

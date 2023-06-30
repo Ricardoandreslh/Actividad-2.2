@@ -3,90 +3,64 @@
   --animate-delay: 0.9s;
 }
 
+*{
+  box-sizing: border-box;
+}
+
 body{    
     margin: 0;
-    padding-top: 60px;
+    padding: 0;
     color: white;
     font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 
 .header-nav{
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    background-color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #51001A;
+  color: white;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
 .titulo h1{
-    margin:30
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .redes{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: left;
+  list-style: none;
 }
 
-.redes li{
-    margin:0 10px;
-
+.redes li {
+  display: inline-block;
+  padding: 0 20px;
 }
 
-.redes a{
-    transition: 0,3s;
+.redes a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
-.redes a:hover{
-    color: #000000;
+.hamburguesa{
+  display: none;
 }
 
-.menu-hamburguesa{
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 999;
-}
-
-.menu:hover .menu-hamburguesa{
-    display: block;
-}
-
-li{
-    display: inline-block;   
-    list-style: none;    
-    display: inline
-}
-
-i{
-    margin-right: 5px;
+.hamburguesa div{
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
 }
 
 a {
     background-color: transparent;
     text-decoration: none;
-}
-
-header{
-    background: #51001A;
-    color: #111;
-    text-align: center;
-    padding: 3px;
-
-}
-
-.redes{
-    padding: 1px;
-    font-size: 30px;
-    text-align: right;
-    margin: 5px 2px;
 }
 
 .header-titulo{
@@ -132,14 +106,10 @@ header{
     text-align: left;
 }
 
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: #51001A;
-    text-align: left;
+.receta-titulo{
+  color: #000000;
 }
+
 
 form {
     max-width: 500px;
@@ -170,4 +140,68 @@ label {
       color:#000000; 
       display:block; 
       margin-bottom:10px
+}
+
+
+/*Responsive Nav-Bar etc....*/
+
+@media screen and (max-width: 1024px) {
+  .redes {
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: absolute;
+    right: 0;
+    top: 80px;
+    background-color: #51001A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  .redes li {
+    opacity: 0;
+  }
+
+  .hamburguesa {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.redes.nav-active {
+  transform: translateX(0);
+}
+
+.redes li {
+  animation: navLinkFade 0.5s ease forwards;
+  animation-fill-mode: none;
+}
+
+.hamburguesa.toggle .line1 {
+  transform: rotate(-45deg);
+  transition: all 0.3s ease;
+}
+
+.hamburguesa.toggle .line2 {
+  opacity: 0;
+}
+
+.hamburguesa.toggle .line3 {
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+
+@keyframes navLinkFade {
+from {
+  opacity: 0;
+  transform: translateX(50px);
+}
+to {
+  opacity: 1;
+  transform: translateX(0px);
+}
 }

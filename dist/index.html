@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -8,7 +8,7 @@
 <meta name="description" content="Actividad 2 Front-End">
 <meta name="author" content="Ricardo Loaiza">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="multimedia/img/icon.png">
+<link rel="shortcut icon" type="image/x-icon" href="/multimedia/img/icon.png">
 <link href="/src/style.css" rel="stylesheet">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -17,18 +17,20 @@
 <body>  
     
     <header class="header-nav">
-        <h1 class="titulo"><a href="index.html" class="header-titulo">RECETAS DE LA ABUELA</a></h1>
+        <div class="titulo">
+            <h1><a href="index.html" class="header-titulo">RECETAS DE LA ABUELA</a></h1>
+        </div>
     
         <ul class="redes">
-            <li class="menu">
-                <ul class="menu-hamburguesa">
-                    <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
-                    <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
-                    <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
-                </ul>
-            </li>
+            <li><a href="index.html"><i class="fa fa-home"></i>Inicio</a></li>
+            <li><a href="contactanos.html"><i class="fa fa-info-circle"></i>Contactanos</a></li>
         </ul>
-    </header>
+        <div class="hamburguesa">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        </header>
 
 
     <main align="center" class="articulos">
@@ -43,10 +45,6 @@
         </section>
     </main>
 
-    <footer>
-        <p>Autor: Ricardo Loaiza<br></p>
-        <a href="contactanos.html" class="titulo"><strong> Click aqui para revisar nuestra información.</strong></a>
-    </footer>
 
     <script src="/src/index.js"></script>
 </body>
