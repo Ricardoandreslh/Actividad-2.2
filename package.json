@@ -3,17 +3,27 @@
   "version": "1.0.0",
   "description": "2.2",
   "type": "commonjs",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -a localhost -p 3001"
-
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^2.0.22",
-    "http-server": "^0.12.3"
+    "animate.css": "^4.1.1",
+    "http-server": "^0.12.3",
+    "install": "^0.13.0",
+    "jquery": "^3.7.0",
+    "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
   }
-
 }
