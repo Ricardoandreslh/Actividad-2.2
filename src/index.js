@@ -1,3 +1,5 @@
+import styles from "./style.css"
+
 const navSlide = () => {
   const hamburguesa = document.querySelector('.hamburguesa');
   const redes = document.querySelector('.redes');

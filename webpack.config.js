@@ -9,16 +9,9 @@ module.exports = {
     module: {
         rules:[
             {
-                test: /\.css$/,
+                test: /\.css$/i,
                 use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1,
-                            modules:true
-                        }
-                    }
+                    'style-loader','css-loader'
                 ],
             },
         ],
